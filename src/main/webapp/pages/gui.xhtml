@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/styles/styles.css"/>
+</h:head>
+
+
+<h:body>
+    <f:view>
+        <ui:include src="/components/header.xhtml"/>
+        <div class="content">
+            <ui:include src="/components/searchTable.xhtml"/>
+
+            <hr style="color: rgba(158, 158, 158, 0.74); width: 68%; margin-top:1%"/>
+            <ui:include src="/components/paginator.xhtml"/>
+            <ui:include src="/components/productOutput.xhtml"/>
+            <ui:include src="/components/paginator.xhtml"/>
+
+        </div>
+    </f:view>
+</h:body>
+</html>

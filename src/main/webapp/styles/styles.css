@@ -1,0 +1,164 @@
+.header {
+    border: solid 1px rgba(158, 158, 158, 0.74);
+    height: 150px;
+    margin-left: 16%;
+    margin-right: 16%;
+}
+
+.headerLine {
+    height: 65px;
+    background-image: linear-gradient(90deg, rgba(0, 126, 255, 0.17), rgba(0, 126, 255, 0));
+
+}
+
+.leafPicture {
+    width: 77%;
+    height: 91%;
+    padding-top: 5%;
+    padding-left: 10%;
+}
+
+.logoPicture {
+    height: 67%;
+    width: 131.563px;
+    position: relative;
+    top: -21%;
+    left: 8%;
+}
+
+.mongoShopLabel {
+    color: rgba(0, 67, 255, 0.46);
+    font-family: sans-serif;
+    font-size: 282%;
+    font-style: oblique;
+    font-weight: 600;
+    position: relative;
+    top: -84%;
+    left: 20%;
+}
+
+.productCatalogLabel {
+    color: rgb(97, 125, 189);
+    font-family: sans-serif;
+    font-size: 282%;
+    font-style: oblique;
+    font-weight: 600;
+    position: relative;
+    left: 33%;
+    top: -94%;
+}
+
+.links {
+    border: solid 1px rgba(158, 158, 158, 0.74);
+    height: 53px;
+    margin-left: 16%;
+    margin-right: 16%;
+    border-top-width: 0px;
+}
+
+.searchPicture {
+    position: relative;
+    left: 4%;
+    top: 28%;
+}
+
+.loupePicture {
+    width: 3%;
+}
+
+.searchLabel {
+    position: relative;
+    left: 8%;
+    top: -22%;
+}
+
+.searchLink {
+    color: black;
+    text-decoration: none;
+}
+
+.newProductPicture {
+    position: relative;
+    top: -63%;
+    left: 16%;
+}
+
+.filePicture {
+    width: 3%;
+}
+
+.newProductLabel {
+    position: relative;
+    top: -116%;
+    left: 20%;
+}
+
+.newProductLink {
+    color: black;
+    text-decoration: none;
+}
+
+.productSearch {
+    border: solid 1px rgba(158, 158, 158, 0.74);
+    height: 40px;
+    margin-left: 16%;
+    margin-right: 16%;
+    background-image: linear-gradient(to top, rgba(0, 126, 255, 0.09), rgba(0, 126, 255, 0.22), rgba(0, 126, 255, 0.09));
+}
+
+.productSearchLabel {
+    position: relative;
+    left: 45%;
+    top: 24%;
+    font-weight: 600;
+}
+
+.searchTable {
+    margin-left: 16%;
+}
+
+.searchPanelGrid {
+    border-collapse: collapse;
+    border-color: rgba(158, 158, 158, 0.74);
+    border-top-width: 0px;
+
+}
+
+.gridOutputLabel {
+}
+
+.gridInputField {
+    border-top-width: 2px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-radius: 6PX;
+}
+
+.searchButton {
+    margin-left: 16%;
+    margin-top: 1%;
+}
+
+.searchCommandButton {
+    border-radius: 9px;
+    height: 42px;
+    width: 105px;
+    border: solid 1px rgba(0, 126, 255, 0);
+    background-image: linear-gradient(to top, rgba(218, 218, 218, 0), rgba(71, 255, 238, 0.52));
+}
+
+.searchButtonPicture {
+
+}
+
+.productOutput {
+    margin-left: 16%;
+
+}
+
+.productOutputTable {
+    width: 920px;
+
+}
+

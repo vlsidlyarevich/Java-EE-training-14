@@ -1,0 +1,40 @@
+<ui:composition
+          xmlns="http://www.w3.org/1999/xhtml"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+          xmlns:f="http://java.sun.com/jsf/core">
+
+
+    <div class="header">
+        <div class="headerLine"></div>
+
+        <div class="logoPicture">
+            <h:graphicImage styleClass="leafPicture" value="/pictures/leaf1.png"/>
+        </div>
+        <div class="mongoShopLabel">
+            <h:outputText value="Mongo Shop"/>
+        </div>
+        <div class="productCatalogLabel">
+            <h:outputText value="Product Catalog"/>
+        </div>
+    </div>
+
+
+    <div class="links">
+        <div class="searchPicture">
+            <h:graphicImage styleClass="loupePicture" value="/pictures/search2.png"/>
+        </div>
+        <div class="searchLabel">
+            <h:link value="Search" styleClass="searchLink"/>
+        </div>
+        <div class="newProductPicture">
+            <h:graphicImage styleClass="filePicture" value="/pictures/file.png"/>
+        </div>
+        <div class="newProductLabel">
+            <h:link value="New product" styleClass="newProductLink"/>
+        </div>
+    </div>
+
+
+
+</ui:composition>

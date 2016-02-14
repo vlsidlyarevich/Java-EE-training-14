@@ -1,0 +1,54 @@
+<ui:composition
+        xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+        xmlns:f="http://java.sun.com/jsf/core">
+
+
+    <div class="productOutput">
+    <h:dataTable border="1" styleClass="productOutputTable" value="#{users.users}" var="user">
+        <h:column>
+            <f:facet name="header">
+                kekstvo1
+            </f:facet>
+            <h:outputText value="#{user.sku}"/>
+        </h:column>
+
+        <h:column>
+            <f:facet name="header">
+                kekstvo2
+            </f:facet>
+            <h:outputText value="#{user.artist}"/>
+        </h:column>
+        <h:column>
+            <f:facet name="header">
+                kekstvo3
+            </f:facet>
+            <h:outputText value="#{user.author}"/>
+        </h:column>
+
+        <h:column>
+            <f:facet name="header">
+                kekstvo4
+            </f:facet>
+            <h:outputText value="#{user.publisher}"/>
+        </h:column>
+
+        <h:column>
+            <f:facet name="header">
+                kekstvo5
+            </f:facet>
+            <h:outputText value="#{user.title}"/>
+        </h:column>
+
+        <h:column>
+            <f:facet name="header">
+                kekstvo6
+            </f:facet>
+            <h:outputText value="#{user.type}"/>
+        </h:column>
+
+    </h:dataTable>
+    </div>
+
+</ui:composition>
