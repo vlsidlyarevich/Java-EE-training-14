@@ -5,12 +5,12 @@
         xmlns:f="http://java.sun.com/jsf/core">
 
 
-    <div class="productSearch">
+    <h:panelGroup layout="block" styleClass="productSearch">
         <h:outputText value="Product search" styleClass="productSearchLabel"/>
-    </div>
+    </h:panelGroup>
 
-    <div class="searchTable">
-        <h:panelGrid styleClass="searchPanelGrid"  border="1"  columns="4" cellpadding="10" cellspacing="0"
+    <h:panelGroup layout="block" styleClass="searchTable">
+        <h:panelGrid styleClass="searchPanelGrid" border="1" columns="4" cellpadding="10" cellspacing="0"
                      width="918px">
             <h:outputText value="Sku:" styleClass="gridOutputLabel"/>
             <h:inputText id="skuInput" styleClass="gridInputField"/>
@@ -27,12 +27,11 @@
             <h:outputText value="Chapter:" styleClass="gridOutputLabel"/>
             <h:inputText id="chapterInput" styleClass="gridInputField"/>
         </h:panelGrid>
-    </div>
+    </h:panelGroup>
 
-    <div class="searchButton">
+    <h:panelGroup layout="block" styleClass="searchButton">
         <h:commandButton value="search" styleClass="searchCommandButton"/>
-    </div>
-
+    </h:panelGroup>
 
 
 </ui:composition>

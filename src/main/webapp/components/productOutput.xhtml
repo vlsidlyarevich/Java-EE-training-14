@@ -5,50 +5,67 @@
         xmlns:f="http://java.sun.com/jsf/core">
 
 
-    <div class="productOutput">
-    <h:dataTable border="1" styleClass="productOutputTable" value="#{users.users}" var="user">
-        <h:column>
-            <f:facet name="header">
-                kekstvo1
-            </f:facet>
-            <h:outputText value="#{user.sku}"/>
-        </h:column>
+    <h:panelGroup layout="block" styleClass="productOutput">
+        <h:dataTable border="1" styleClass="productOutputTable
+    border-collapse: collapse;
+    border-color: rgba(158, 158, 158, 0.74);
+    border-top-width: 0px;" value="#{users.users}" var="user">
+            <h:column>
+                <f:facet name="header">
+                    Sku
+                </f:facet>
+                <h:outputText value="#{user.sku}"/>
+            </h:column>
 
-        <h:column>
-            <f:facet name="header">
-                kekstvo2
-            </f:facet>
-            <h:outputText value="#{user.artist}"/>
-        </h:column>
-        <h:column>
-            <f:facet name="header">
-                kekstvo3
-            </f:facet>
-            <h:outputText value="#{user.author}"/>
-        </h:column>
+            <h:column>
+                <f:facet name="header">
+                    Type
+                </f:facet>
+                <h:outputText value="#{user.type}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    Title
+                </f:facet>
+                <h:outputText value="#{user.title}"/>
+            </h:column>
 
-        <h:column>
-            <f:facet name="header">
-                kekstvo4
-            </f:facet>
-            <h:outputText value="#{user.publisher}"/>
-        </h:column>
+            <h:column>
+                <f:facet name="header">
+                    Publisher
+                </f:facet>
+                <h:outputText value="#{user.publisher}"/>
+            </h:column>
 
-        <h:column>
-            <f:facet name="header">
-                kekstvo5
-            </f:facet>
-            <h:outputText value="#{user.title}"/>
-        </h:column>
+            <h:column>
+                <f:facet name="header">
+                    Artist
+                </f:facet>
+                <h:outputText value="#{user.artist}"/>
+            </h:column>
 
-        <h:column>
-            <f:facet name="header">
-                kekstvo6
-            </f:facet>
-            <h:outputText value="#{user.type}"/>
-        </h:column>
+            <h:column>
+                <f:facet name="header">
+                    Author
+                </f:facet>
+                <h:outputText value="#{user.author}"/>
+            </h:column>
 
-    </h:dataTable>
-    </div>
 
+            <h:column>
+                <f:facet name="header">
+                    Edit
+                </f:facet>
+            </h:column>
+
+
+            <h:column>
+                <f:facet name="header">
+                    Delete
+                </f:facet>
+            </h:column>
+
+
+        </h:dataTable>
+    </h:panelGroup>
 </ui:composition>

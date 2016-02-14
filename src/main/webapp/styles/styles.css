@@ -154,11 +154,12 @@
 
 .productOutput {
     margin-left: 16%;
-
+    margin-top:1%;
 }
 
 .productOutputTable {
     width: 920px;
-
+    border-collapse: collapse;
+    border-color: rgba(158, 158, 158, 0.74);
 }
 
