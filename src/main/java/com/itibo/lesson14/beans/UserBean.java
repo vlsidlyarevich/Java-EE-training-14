@@ -20,9 +20,11 @@ public class UserBean {
     public void init(){
 
         users = new LinkedList<UserModel>();
-        users.add(new UserModel(10001,"rock","rock","rock","rock","rock"));
-        users.add(new UserModel(10002,"rock","rock","rock","rock","rock"));
-        users.add(new UserModel(10003,"rock","rock","rock","rock","rock"));
+        users.add(new UserModel(100002,"Audio album","Love song","Sony Music","Khali Fong",""));
+        users.add(new UserModel(100003,"Audio album","Hurt","Sony Music","Johny Cash","Johny Cash"));
+        users.add(new UserModel(100004,"Audio album","When the man comes around","Sony Music","Johny Cash","Johny Cash"));
+        users.add(new UserModel(100001,"Audio album","A love supreme","Sony Music","John Coltrane",""));
+        users.add(new UserModel(100005,"Audio album","I hung my head","Sony Music","Johny Cash","Johny Cash"));
     }
 
 

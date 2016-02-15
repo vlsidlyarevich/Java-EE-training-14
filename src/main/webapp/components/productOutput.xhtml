@@ -6,63 +6,61 @@
 
 
     <h:panelGroup layout="block" styleClass="productOutput">
-        <h:dataTable border="1" styleClass="productOutputTable
-    border-collapse: collapse;
-    border-color: rgba(158, 158, 158, 0.74);
-    border-top-width: 0px;" value="#{users.users}" var="user">
-            <h:column>
+        <h:dataTable border="1" styleClass="productOutputTable" value="#{users.users}" var="user">
+            <h:column headerClass="productOutputHeader">
                 <f:facet name="header">
                     Sku
                 </f:facet>
                 <h:outputText value="#{user.sku}"/>
             </h:column>
 
-            <h:column>
+            <h:column headerClass="productOutputHeader">
                 <f:facet name="header">
                     Type
                 </f:facet>
                 <h:outputText value="#{user.type}"/>
             </h:column>
-            <h:column>
+            <h:column headerClass="productOutputHeader">
                 <f:facet name="header">
                     Title
                 </f:facet>
                 <h:outputText value="#{user.title}"/>
             </h:column>
 
-            <h:column>
+            <h:column headerClass="productOutputHeader">
                 <f:facet name="header">
                     Publisher
                 </f:facet>
                 <h:outputText value="#{user.publisher}"/>
             </h:column>
 
-            <h:column>
+            <h:column headerClass="productOutputHeader">
                 <f:facet name="header">
                     Artist
                 </f:facet>
                 <h:outputText value="#{user.artist}"/>
             </h:column>
 
-            <h:column>
+            <h:column headerClass="productOutputHeader">
                 <f:facet name="header">
                     Author
                 </f:facet>
                 <h:outputText value="#{user.author}"/>
             </h:column>
 
-
-            <h:column>
+            <h:column headerClass="productOutputHeader">
                 <f:facet name="header">
                     Edit
                 </f:facet>
+                <h:commandButton value="Edit" styleClass="editButton"/>
             </h:column>
 
 
-            <h:column>
+            <h:column headerClass="productOutputHeader">
                 <f:facet name="header">
                     Delete
                 </f:facet>
+                <h:commandButton value="Delete" styleClass="editButton"/>
             </h:column>
 
 

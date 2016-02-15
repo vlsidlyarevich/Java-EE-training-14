@@ -144,7 +144,7 @@
     height: 42px;
     width: 105px;
     border: solid 1px rgba(0, 126, 255, 0);
-    background-image: linear-gradient(to top, rgba(218, 218, 218, 0), rgba(71, 255, 238, 0.52));
+    background-image: linear-gradient(to top, rgb(221, 255, 255), rgba(71, 255, 238, 0.22));
 }
 
 .searchButtonPicture {
@@ -153,12 +153,27 @@
 
 .productOutput {
     margin-left: 16%;
-    margin-top:1%;
+    margin-top: 1%;
 }
 
 .productOutputTable {
-    width: 920px;
+    width: 907px;
+    height: 370px;
     border-collapse: collapse;
-    border-color: rgba(158, 158, 158, 0.74);
+    border-color: rgba(158, 158, 158, 0.42);
+    border-top-width: 0px;
 }
 
+.productOutputHeader {
+    height: 45px;
+    background-image: linear-gradient(to top, rgb(221, 255, 255), rgba(71, 255, 238, 0.22));
+}
+
+.editButton {
+    border-radius: 9px;
+    height: 30px;
+    width: 70px;
+    border: solid 1px rgba(0, 126, 255, 0);
+    background-image: linear-gradient(to top, rgb(221, 255, 255), rgba(71, 255, 238, 0.22));
+
+}
