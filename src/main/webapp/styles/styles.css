@@ -119,9 +119,8 @@
 
 .searchPanelGrid {
     border-collapse: collapse;
-    border-color: rgba(158, 158, 158, 0.74);
+    border-color: rgba(158, 158, 158, 0.42);
     border-top-width: 0px;
-
 }
 
 .gridOutputLabel {
