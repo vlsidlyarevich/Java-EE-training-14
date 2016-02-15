@@ -121,6 +121,7 @@
     border-collapse: collapse;
     border-color: rgba(158, 158, 158, 0.42);
     border-top-width: 0px;
+    width:907px;
 }
 
 .gridOutputLabel {
@@ -151,6 +152,10 @@
 
 }
 
+.line{
+    color: rgba(158, 158, 158, 0.74); width: 67.8%;
+}
+
 .productOutput {
     margin-left: 16%;
     margin-top: 1%;
@@ -169,7 +174,16 @@
     background-image: linear-gradient(to top, rgb(221, 255, 255), rgba(71, 255, 238, 0.22));
 }
 
+.productOutputResult{
+    padding-left: 5px;
+    color: rgba(0, 67, 255, 0.64);
+    font-family: sans-serif;
+    font-size: 81%;
+    font-weight: 600;
+}
+
 .editButton {
+    padding-left: 5px;
     border-radius: 9px;
     height: 30px;
     width: 70px;
