@@ -2,11 +2,15 @@
         xmlns="http://www.w3.org/1999/xhtml"
         xmlns:h="http://java.sun.com/jsf/html"
         xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-        xmlns:f="http://java.sun.com/jsf/core">
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:comp="http://java.sun.com/jsf/composite/components">
 
+
+    <ui:include src="paginator.xhtml"/>
 
     <h:panelGroup layout="block" styleClass="productOutput">
-        <h:dataTable border="1" styleClass="productOutputTable" value="#{users.users}" var="user">
+
+        <h:dataTable border="1" styleClass="productOutputTable" value="#{users.getSublist()}" var="user">
             <h:column headerClass="productOutputHeader">
                 <f:facet name="header">
                     Sku
@@ -63,7 +67,10 @@
                 <h:commandButton value="Delete" styleClass="editButton"/>
             </h:column>
 
-
         </h:dataTable>
+
     </h:panelGroup>
+
+    <ui:include src="paginator.xhtml"/>
+
 </ui:composition>

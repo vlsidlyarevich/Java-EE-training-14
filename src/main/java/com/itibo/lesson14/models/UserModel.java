@@ -8,7 +8,7 @@ public class UserModel {
     private String publisher;
     private String artist;
     private String author;
-
+    private Boolean editable;
 
     public UserModel(int sku, String type, String title, String publisher, String artist, String author) {
         this.sku = sku;
@@ -65,5 +65,27 @@ public class UserModel {
 
     public void setAuthor(String author) {
         this.author = author;
+    }
+
+    public boolean isEditable() {
+        return editable;
+    }
+
+    public void setEditable(boolean editable) {
+        this.editable = editable;
+    }
+
+
+    @Override
+    public String toString() {
+        return "UserModel{" +
+                "sku=" + sku +
+                ", type='" + type + '\'' +
+                ", title='" + title + '\'' +
+                ", publisher='" + publisher + '\'' +
+                ", artist='" + artist + '\'' +
+                ", author='" + author + '\'' +
+                ", editable=" + editable +
+                '}';
     }
 }

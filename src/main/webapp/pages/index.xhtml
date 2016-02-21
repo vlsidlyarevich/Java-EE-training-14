@@ -4,7 +4,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:f="http://java.sun.com/jsf/core">
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:comp="http://java.sun.com/jsf/composite/components">
 
 <h:head>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/styles/styles.css"/>
@@ -13,16 +14,16 @@
 
 <h:body>
     <f:view>
-        <ui:include src="/components/header.xhtml"/>
-        <div class="content">
-            <ui:include src="/components/searchTable.xhtml"/>
+        <h:form>
+            <ui:include src="/blocks/header.xhtml"/>
 
-            <hr class="line"/>
-            <ui:include src="/components/paginator.xhtml"/>
-            <ui:include src="/components/productOutput.xhtml"/>
-            <ui:include src="/components/paginator.xhtml"/>
+            <h:panelGroup layout="block" styleClass="content">
+                <ui:include src="/blocks/search-table.xhtml"/>
+                <hr class="line"/>
+                <ui:include src="/blocks/search-output.xhtml"/>
+            </h:panelGroup>
 
-        </div>
+        </h:form>
     </f:view>
 </h:body>
 </html>
