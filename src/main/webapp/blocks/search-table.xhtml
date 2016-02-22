@@ -11,27 +11,30 @@
 
     <h:panelGroup layout="block" styleClass="searchTable">
 
-        <h:panelGrid styleClass="searchPanelGrid" border="1" columns="4" cellpadding="10" cellspacing="0">
+        <h:panelGrid styleClass="searchPanelGrid" id="searchPanelGrid" border="1" columns="4" cellpadding="10" cellspacing="0">
             <h:outputText value="Sku:" styleClass="gridOutputLabel"/>
-            <h:inputText id="skuInput" styleClass="gridInputField"/>
+            <h:inputText id="skuInput" styleClass="gridInputField" value="#{users.searchModel.sku}" />
             <h:outputText value="Product type:" styleClass="gridOutputLabel"/>
             <h:selectOneMenu id="productTypeInput" style="">
                 <f:selectItem itemValue="Audio Album" itemLabel="AudioAlbum"/>
             </h:selectOneMenu>
             <h:outputText value="Title:" styleClass="gridOutputLabel"/>
-            <h:inputText id="titleInput" styleClass="gridInputField"/>
-            <h:outputText value="Description:" styleClass="gridOutputLabel"/>
-            <h:inputText id="descriptionInput" styleClass="gridInputField"/>
-            <h:outputText value="Track:" styleClass="gridOutputLabel"/>
-            <h:inputText id="trackInput" styleClass="gridInputField"/>
-            <h:outputText value="Chapter:" styleClass="gridOutputLabel"/>
-            <h:inputText id="chapterInput" styleClass="gridInputField"/>
+            <h:inputText id="titleInput" styleClass="gridInputField" value="#{users.searchModel.title}"/>
+            <h:outputText value="Publisher:" styleClass="gridOutputLabel"/>
+            <h:inputText id="publisherInput" styleClass="gridInputField" value="#{users.searchModel.publisher}"/>
+            <h:outputText value="Artist:" styleClass="gridOutputLabel"/>
+            <h:inputText id="artistInput" styleClass="gridInputField" value="#{users.searchModel.artist}"/>
+            <h:outputText value="Author:" styleClass="gridOutputLabel"/>
+            <h:inputText id="authorInput" styleClass="gridInputField" value="#{users.searchModel.author}"/>
         </h:panelGrid>
     </h:panelGroup>
 
     <h:panelGroup layout="block" styleClass="searchButton">
-        <h:commandButton value="search" styleClass="searchCommandButton"/>
+        <h:commandButton value="search" styleClass="searchCommandButton">
+            <f:ajax execute="skuInput authorInput artistInput publisherInput titleInput" render="@all"/>
+        </h:commandButton>
     </h:panelGroup>
 
 
 </ui:composition>
+

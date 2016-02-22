@@ -7,56 +7,65 @@
 
 
     <ui:include src="paginator.xhtml"/>
-
+    
+    
+    
     <h:panelGroup layout="block" styleClass="productOutput">
 
-        <h:dataTable border="1" styleClass="productOutputTable" value="#{users.getSublist()}" var="user">
+        <h:dataTable border="1" styleClass="productOutputTable" id="productOutputTable" value="#{users.getSublist()}" var="user">
             <h:column headerClass="productOutputHeader">
                 <f:facet name="header">
                     Sku
                 </f:facet>
-                <h:outputText value="#{user.sku}" styleClass="productOutputResult"/>
+                <h:inputText value="#{user.sku}" rendered="#{user.editable}" styleClass="searchOutputEditField"/>
+                <h:outputLabel value="#{user.sku}" styleClass="productOutputResult" rendered="#{not user.editable}"/>
             </h:column>
 
             <h:column headerClass="productOutputHeader">
                 <f:facet name="header">
                     Type
                 </f:facet>
-                <h:outputText value="#{user.type}" styleClass="productOutputResult"/>
+                <h:inputText value="#{user.type}" rendered="#{user.editable}" styleClass="searchOutputEditField"/>
+                <h:outputLabel value="#{user.type}" styleClass="productOutputResult" rendered="#{not user.editable}"/>
             </h:column>
             <h:column headerClass="productOutputHeader">
                 <f:facet name="header">
                     Title
                 </f:facet>
-                <h:outputText value="#{user.title}" styleClass="productOutputResult"/>
+                <h:inputText value="#{user.title}" rendered="#{user.editable}" styleClass="searchOutputEditField"/>
+                <h:outputLabel value="#{user.title}" styleClass="productOutputResult" rendered="#{not user.editable}"/>
             </h:column>
 
             <h:column headerClass="productOutputHeader">
-                <f:facet name="header">
+                <f:facet name="header" styleClass="search-output-header">
                     Publisher
                 </f:facet>
-                <h:outputText value="#{user.publisher}" styleClass="productOutputResult"/>
+                <h:inputText value="#{user.publisher}" rendered="#{user.editable}" styleClass="searchOutputEditField"/>
+                <h:outputLabel value="#{user.publisher}" styleClass="productOutputResult" rendered="#{not user.editable}"/>
             </h:column>
 
             <h:column headerClass="productOutputHeader">
                 <f:facet name="header">
                     Artist
                 </f:facet>
-                <h:outputText value="#{user.artist}" styleClass="productOutputResult"/>
+                <h:inputText value="#{user.artist}" rendered="#{user.editable}" styleClass="searchOutputEditField"/>
+                <h:outputLabel value="#{user.artist}" styleClass="productOutputResult" rendered="#{not user.editable}"/>
             </h:column>
 
             <h:column headerClass="productOutputHeader">
                 <f:facet name="header">
                     Author
                 </f:facet>
-                <h:outputText value="#{user.author}" styleClass="productOutputResult"/>
+                <h:inputText value="#{user.author}" rendered="#{user.editable}" styleClass="searchOutputEditField"/>
+                <h:outputLabel value="#{user.author}" styleClass="productOutputResult" rendered="#{not user.editable}"/>
             </h:column>
 
             <h:column headerClass="productOutputHeader">
                 <f:facet name="header">
                     Edit
                 </f:facet>
-                <h:commandButton value="Edit" styleClass="editButton"/>
+                <h:commandButton value="Edit" styleClass="editButton" action="#{users.edit(user)}" rendered="#{not user.editable}"/>
+                <h:commandButton value="Save" styleClass="editButton" action="#{users.save}" rendered="#{user.editable}"/>
             </h:column>
 
 

@@ -2,7 +2,7 @@ package com.itibo.lesson14.models;
 
 public class UserModel {
 
-    private int sku;
+    private String sku;
     private String type;
     private String title;
     private String publisher;
@@ -10,21 +10,31 @@ public class UserModel {
     private String author;
     private Boolean editable;
 
-    public UserModel(int sku, String type, String title, String publisher, String artist, String author) {
+    public UserModel(String sku, String type, String title, String publisher, String artist, String author) {
         this.sku = sku;
         this.type = type;
         this.title = title;
         this.publisher = publisher;
         this.artist = artist;
         this.author = author;
+        this.editable = false;
+    }
+    public UserModel(){
+        this.sku = "";
+        this.type = "";
+        this.title = "";
+        this.publisher = "";
+        this.artist = "";
+        this.author = "";
+        this.editable = false;
     }
 
-    public int getSku() {
+    public String getSku() {
         return sku;
     }
 
-    public void setSku(int sku) {
-        this.sku = sku;
+    public void setSku(String sku) {
+        this.sku =sku;
     }
 
     public String getType() {

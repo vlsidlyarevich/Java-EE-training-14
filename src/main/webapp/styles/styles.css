@@ -1,8 +1,7 @@
 .header {
     border: solid 1px rgba(158, 158, 158, 0.74);
     height: 150px;
-    margin-left: 16%;
-    margin-right: 16%;
+    width:100%;
 }
 
 .headerLine {
@@ -26,34 +25,31 @@
     left: 8%;
 }
 
-.mongoShopLabel {
-    color: rgba(0, 67, 255, 0.46);
+.mongoShopLabel {color: rgba(0, 67, 255, 0.46);
     font-family: sans-serif;
-    font-size: 282%;
+    font-size: 261%;
     font-style: oblique;
     font-weight: 600;
     position: relative;
     top: -84%;
-    left: 20%;
+    left: 23%;
 }
 
-.productCatalogLabel {
-    color: rgb(97, 125, 189);
+.productCatalogLabel {    color: rgb(97, 125, 189);
     font-family: sans-serif;
-    font-size: 282%;
+    font-size: 268%;
     font-style: oblique;
     font-weight: 600;
     position: relative;
-    left: 33%;
+    left: 30%;
     top: -94%;
 }
 
 .links {
     border: solid 1px rgba(158, 158, 158, 0.74);
     height: 53px;
-    margin-left: 16%;
-    margin-right: 16%;
     border-top-width: 0px;
+    width:100%;;
 }
 
 .searchPicture {
@@ -69,7 +65,7 @@
 .searchLabel {
     position: relative;
     left: 8%;
-    top: -22%;
+    top: -17%;
 }
 
 .searchLink {
@@ -84,7 +80,7 @@
 
 .newProductPicture {
     position: relative;
-    top: -63%;
+    top: -53%;
     left: 16%;
 }
 
@@ -94,7 +90,7 @@
 
 .newProductLabel {
     position: relative;
-    top: -116%;
+    top: -98%;
     left: 20%;
 }
 
@@ -110,27 +106,25 @@
 .productSearch {
     border: solid 1px rgba(158, 158, 158, 0.74);
     height: 40px;
-    margin-left: 16%;
-    margin-right: 16%;
-    background-image: linear-gradient(to top, rgba(0, 126, 255, 0.09), rgba(0, 126, 255, 0.22), rgba(0, 126, 255, 0.09));
-}
+    width: 100%;
+    text-align: center;
+    background-image: linear-gradient(to top, rgba(0, 126, 255, 0.09), rgba(0, 126, 255, 0.22), rgba(0, 126, 255, 0.09));}
 
 .productSearchLabel {
     position: relative;
-    left: 45%;
+
     top: 24%;
     font-weight: 600;
 }
 
 .searchTable {
-    margin-left: 16%;
+    width:100%;
 }
 
-.searchPanelGrid {
-    border-collapse: collapse;
+.searchPanelGrid {border-collapse: collapse;
     border-color: rgba(158, 158, 158, 0.42);
     border-top-width: 0px;
-    width: 81.09%;
+    width: 100%;
 }
 
 .gridOutputLabel {
@@ -145,7 +139,6 @@
 }
 
 .searchButton {
-    margin-left: 16%;
     margin-top: 1%;
 }
 
@@ -168,16 +161,15 @@
 
 .line {
     color: rgba(158, 158, 158, 0.74);
-    width: 67.8%;
+    width: 100%;
 }
 
 .productOutput {
-    margin-left: 16%;
     margin-top: 0px;
 }
 
 .productOutputTable {
-    width: 81.09%;
+    width: 100%;
     height: 370px;
     border-collapse: collapse;
     border-color: rgba(158, 158, 158, 0.42);
@@ -187,6 +179,7 @@
 .productOutputHeader {
     height: 45px;
     background-image: linear-gradient(to top, rgb(221, 255, 255), rgba(71, 255, 238, 0.22));
+    text-align: center;
 }
 
 .productOutputResult {
@@ -214,10 +207,8 @@
 .paginator {
     border: solid 1px rgba(158, 158, 158, 0.74);
     height: 40px;
-    margin-left: 16%;
-    margin-right: 16%;
-    background-image: linear-gradient(to top, rgba(0, 126, 255, 0.09), rgba(0, 126, 255, 0.22), rgba(0, 126, 255, 0.09));
-}
+    width: 100%;
+    background-image: linear-gradient(to top, rgba(0, 126, 255, 0.09), rgba(0, 126, 255, 0.22), rgba(0, 126, 255, 0.09));}
 
 .paginatorPrevButton {
     background-image: url("/pictures/previous.png");
@@ -278,7 +269,19 @@
     left: 45.6%;
     background-color:rgb(153, 195, 255);
 }
-.paginatorSelectOneMenu{
+.wrapper{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width:50%;
+    margin: 0 0 0 25%;
+    min-width: 715px;
+    min-height: 600px;
+}
+.searchOutputEditField{
 
-
+    border-top-width: 2px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-radius: 6PX;
+    width:100%;
 }

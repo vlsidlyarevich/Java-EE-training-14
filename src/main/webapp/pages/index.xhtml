@@ -8,21 +8,28 @@
       xmlns:comp="http://java.sun.com/jsf/composite/components">
 
 <h:head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <h:outputStylesheet library="css" name="bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/styles/styles.css"/>
+
 </h:head>
 
 
 <h:body>
     <f:view>
         <h:form>
-            <ui:include src="/blocks/header.xhtml"/>
 
-            <h:panelGroup layout="block" styleClass="content">
+            <h:panelGroup layout="block" styleClass="wrapper">
+                <ui:include src="/blocks/header.xhtml"/>
+
                 <ui:include src="/blocks/search-table.xhtml"/>
                 <hr class="line"/>
-                <ui:include src="/blocks/search-output.xhtml"/>
-            </h:panelGroup>
+                <ui:include src="/blocks/search-output.xhtml"/><!--
+                <ui:include src="/blocks/collapsible-panel.xhtml"/>-->
 
+
+            </h:panelGroup>
         </h:form>
     </f:view>
 </h:body>
