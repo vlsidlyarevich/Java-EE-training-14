@@ -1,11 +1,11 @@
-<ui:composition
-        xmlns="http://www.w3.org/1999/xhtml"
-        xmlns:h="http://java.sun.com/jsf/html"
-        xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-        xmlns:f="http://java.sun.com/jsf/core">
+<f:view xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:comp="http://java.sun.com/jsf/composite/components">
 
 
-    <h:panelGroup layout="block" styleClass="productSearch">
+<h:panelGroup layout="block" styleClass="productSearch">
         <h:outputText value="Product search" styleClass="productSearchLabel"/>
     </h:panelGroup>
 
@@ -13,28 +13,27 @@
 
         <h:panelGrid styleClass="searchPanelGrid" id="searchPanelGrid" border="1" columns="4" cellpadding="10" cellspacing="0">
             <h:outputText value="Sku:" styleClass="gridOutputLabel"/>
-            <h:inputText id="skuInput" styleClass="gridInputField" value="#{users.searchModel.sku}" />
+            <h:inputText id="skuInput" styleClass="gridInputField" value="#{userBean.searchModel.sku}" />
             <h:outputText value="Product type:" styleClass="gridOutputLabel"/>
             <h:selectOneMenu id="productTypeInput" style="">
                 <f:selectItem itemValue="Audio Album" itemLabel="AudioAlbum"/>
             </h:selectOneMenu>
             <h:outputText value="Title:" styleClass="gridOutputLabel"/>
-            <h:inputText id="titleInput" styleClass="gridInputField" value="#{users.searchModel.title}"/>
+            <h:inputText id="titleInput" styleClass="gridInputField" value="#{userBean.searchModel.title}"/>
+
             <h:outputText value="Publisher:" styleClass="gridOutputLabel"/>
-            <h:inputText id="publisherInput" styleClass="gridInputField" value="#{users.searchModel.publisher}"/>
+            <h:inputText id="publisherInput" styleClass="gridInputField" value="#{userBean.searchModel.publisher}"/>
             <h:outputText value="Artist:" styleClass="gridOutputLabel"/>
-            <h:inputText id="artistInput" styleClass="gridInputField" value="#{users.searchModel.artist}"/>
+            <h:inputText id="artistInput" styleClass="gridInputField" value="#{userBean.searchModel.artist}"/>
             <h:outputText value="Author:" styleClass="gridOutputLabel"/>
-            <h:inputText id="authorInput" styleClass="gridInputField" value="#{users.searchModel.author}"/>
+            <h:inputText id="authorInput" styleClass="gridInputField" value="#{userBean.searchModel.author}"/>
         </h:panelGrid>
     </h:panelGroup>
 
     <h:panelGroup layout="block" styleClass="searchButton">
         <h:commandButton value="search" styleClass="searchCommandButton">
-            <f:ajax execute="skuInput authorInput artistInput publisherInput titleInput" render="@all"/>
+            <f:ajax execute="@form" render="@form"/>
         </h:commandButton>
     </h:panelGroup>
 
-
-</ui:composition>
-
+</f:view>

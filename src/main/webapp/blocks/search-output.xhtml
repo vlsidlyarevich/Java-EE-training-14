@@ -1,4 +1,4 @@
-<ui:composition
+<f:view
         xmlns="http://www.w3.org/1999/xhtml"
         xmlns:h="http://java.sun.com/jsf/html"
         xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
@@ -8,11 +8,9 @@
 
     <ui:include src="paginator.xhtml"/>
     
-    
-    
     <h:panelGroup layout="block" styleClass="productOutput">
 
-        <h:dataTable border="1" styleClass="productOutputTable" id="productOutputTable" value="#{users.getSublist()}" var="user">
+        <h:dataTable border="1" styleClass="productOutputTable" id="productOutputTable" value="#{userBean.getSublist()}" var="user">
             <h:column headerClass="productOutputHeader">
                 <f:facet name="header">
                     Sku
@@ -64,8 +62,8 @@
                 <f:facet name="header">
                     Edit
                 </f:facet>
-                <h:commandButton value="Edit" styleClass="editButton" action="#{users.edit(user)}" rendered="#{not user.editable}"/>
-                <h:commandButton value="Save" styleClass="editButton" action="#{users.save}" rendered="#{user.editable}"/>
+                <h:commandButton value="Edit" styleClass="editButton" action="#{userBean.edit(user)}" rendered="#{not user.editable}"/>
+                <h:commandButton value="Save" styleClass="editButton" action="#{userBean.save}" rendered="#{user.editable}"/>
             </h:column>
 
 
@@ -82,4 +80,4 @@
 
     <ui:include src="paginator.xhtml"/>
 
-</ui:composition>
+</f:view>

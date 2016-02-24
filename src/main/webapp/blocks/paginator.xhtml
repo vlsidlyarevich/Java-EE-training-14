@@ -7,8 +7,8 @@
 
 
         <h:panelGroup layout="block" styleClass="paginator">
-            <comp:paginator action="#{users.action}" pageItems="#{users.pageItems}"
-                            currentPage="#{users.currentPage}" list="#{users.users}"/>
+            <comp:paginator action="#{userBean.action}" pageItems="#{userBean.pageItems}"
+                            currentPage="#{userBean.currentPage}" list="#{userBean.applyFilter()}"/>
         </h:panelGroup>
 
 </ui:composition>

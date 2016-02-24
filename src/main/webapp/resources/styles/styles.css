@@ -208,6 +208,7 @@
     border: solid 1px rgba(158, 158, 158, 0.74);
     height: 40px;
     width: 100%;
+    text-align: right;
     background-image: linear-gradient(to top, rgba(0, 126, 255, 0.09), rgba(0, 126, 255, 0.22), rgba(0, 126, 255, 0.09));}
 
 .paginatorPrevButton {
@@ -284,4 +285,8 @@
     border-right-width: 1px;
     border-radius: 6PX;
     width:100%;
+}
+
+.collapsiblePanel-header{
+text-align: right;
 }

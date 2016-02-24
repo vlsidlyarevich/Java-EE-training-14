@@ -11,26 +11,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <h:outputStylesheet library="css" name="bootstrap.min.css"/>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/styles/styles.css"/>
+    <h:outputStylesheet library="styles" name="styles.css"/>
 
 </h:head>
-
-
 <h:body>
-    <f:view>
-        <h:form>
+    <h:form>
 
-            <h:panelGroup layout="block" styleClass="wrapper">
-                <ui:include src="/blocks/header.xhtml"/>
+        <h:panelGroup layout="block" styleClass="wrapper">
+            <ui:include src="/blocks/header.xhtml"/>
+            <h:panelGroup layout="block" styleClass="collapsible-panel">
+                <comp:collapsibleSearchPanel collapsed="#{CollapseController.collapsed}">
+                    <f:facet name="header">
 
-                <ui:include src="/blocks/search-table.xhtml"/>
-                <hr class="line"/>
-                <ui:include src="/blocks/search-output.xhtml"/><!--
-                <ui:include src="/blocks/collapsible-panel.xhtml"/>-->
-
-
+                    </f:facet>
+                    <ui:include src="/blocks/search-table.xhtml"/>
+                </comp:collapsibleSearchPanel>
             </h:panelGroup>
-        </h:form>
-    </f:view>
+            <hr class="line"/>
+            <ui:include src="/blocks/search-output.xhtml"/>
+
+
+        </h:panelGroup>
+    </h:form>
 </h:body>
 </html>

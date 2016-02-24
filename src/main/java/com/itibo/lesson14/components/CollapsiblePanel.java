@@ -1,24 +1,40 @@
 package com.itibo.lesson14.components;
 
 
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
+import javax.el.ELContext;
+import javax.el.ValueExpression;
+import javax.faces.component.FacesComponent;
 import javax.faces.component.UINamingContainer;
+import javax.faces.context.FacesContext;
+import javax.faces.event.ActionEvent;
 
-@ManagedBean
-@SessionScoped
+@FacesComponent("collapsiblePanel")
 public class CollapsiblePanel extends UINamingContainer {
 
-    private boolean collapsed = false;
+
+    enum PropertyKeys {
+        collapsed
+    }
 
     public boolean isCollapsed() {
-        return collapsed;
+        return (Boolean) getStateHelper().eval(PropertyKeys.collapsed, Boolean.FALSE);
     }
+
     public void setCollapsed(boolean collapsed) {
-        this.collapsed = collapsed;
+        getStateHelper().put(PropertyKeys.collapsed, collapsed);
     }
-    public String toggle() {
-        collapsed = !collapsed;
-        return null;
+
+    @SuppressWarnings("UnusedDeclaration")
+    public void toggle(ActionEvent e) {
+        setCollapsed(!isCollapsed());
+        setCollapsedValueExpression();
+    }
+
+    private void setCollapsedValueExpression() {
+        ELContext ctx = FacesContext.getCurrentInstance().getELContext();
+        ValueExpression ve = getValueExpression(PropertyKeys.collapsed.name());
+        if (ve != null) {
+            ve.setValue(ctx, isCollapsed());
+        }
     }
 }

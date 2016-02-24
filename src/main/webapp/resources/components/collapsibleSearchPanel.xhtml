@@ -5,21 +5,20 @@
                 xmlns:composite="http://java.sun.com/jsf/composite">
 
 
-    <composite:interface componentType="collapsibleSearchPanel">
-        <composite:attribute name="model"/>
+    <composite:interface componentType="collapsiblePanel">
         <composite:attribute name="collapsed"/>
-        <composite:attribute name="toggle" method-signature="java.lang.String f()"/>
         <composite:actionSource name="toggle"/>
         <composite:facet name="header"/>
     </composite:interface>
 
     <composite:implementation>
         <h:panelGroup layout="block" styleClass="collapsiblePanel-header">
-            <h:commandButton id="toggle" action="#{cc.attrs.model.toggle}"
-                    />
+            <h:commandButton id="toggle" actionListener="#{cc.toggle}" styleClass="collapsiblePanel-img"
+                             image="#{resource[cc.collapsed ? 'pictures:plus.png' : 'pictures:minus.png']}">
+            </h:commandButton>
             <composite:renderFacet name="header"/>
         </h:panelGroup>
-        <h:panelGroup layout="block" rendered="#{!cc.attrs.model.collapsed}">
+        <h:panelGroup layout="block" rendered="#{!cc.collapsed}">
             <composite:insertChildren/>
         </h:panelGroup>
     </composite:implementation>
