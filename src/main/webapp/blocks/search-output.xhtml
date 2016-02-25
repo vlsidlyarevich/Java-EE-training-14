@@ -8,70 +8,70 @@
 
     <ui:include src="paginator.xhtml"/>
     
-    <h:panelGroup layout="block" styleClass="productOutput">
+    <h:panelGroup layout="block" styleClass="product-output">
 
-        <h:dataTable border="1" styleClass="productOutputTable" id="productOutputTable" value="#{userBean.getSublist()}" var="user">
-            <h:column headerClass="productOutputHeader">
+        <h:dataTable border="1" styleClass="product-output-table table table-striped"  id="productOutputTable" value="#{userBean.getSublist()}" var="user">
+            <h:column headerClass="product-output-header">
                 <f:facet name="header">
                     Sku
                 </f:facet>
-                <h:inputText value="#{user.sku}" rendered="#{user.editable}" styleClass="searchOutputEditField"/>
-                <h:outputLabel value="#{user.sku}" styleClass="productOutputResult" rendered="#{not user.editable}"/>
+                <h:inputText value="#{user.sku}" rendered="#{user.editable}" styleClass="form-control output-table-edit-field"/>
+                <h:outputLabel value="#{user.sku}" styleClass="product-output-result" rendered="#{not user.editable}"/>
             </h:column>
 
-            <h:column headerClass="productOutputHeader">
+            <h:column headerClass="product-output-header">
                 <f:facet name="header">
                     Type
                 </f:facet>
-                <h:inputText value="#{user.type}" rendered="#{user.editable}" styleClass="searchOutputEditField"/>
-                <h:outputLabel value="#{user.type}" styleClass="productOutputResult" rendered="#{not user.editable}"/>
+                <h:inputText value="#{user.type}" rendered="#{user.editable}" styleClass="form-control output-table-edit-field"/>
+                <h:outputLabel value="#{user.type}" styleClass="product-output-result" rendered="#{not user.editable}"/>
             </h:column>
-            <h:column headerClass="productOutputHeader">
+            <h:column headerClass="product-output-header">
                 <f:facet name="header">
                     Title
                 </f:facet>
-                <h:inputText value="#{user.title}" rendered="#{user.editable}" styleClass="searchOutputEditField"/>
-                <h:outputLabel value="#{user.title}" styleClass="productOutputResult" rendered="#{not user.editable}"/>
+                <h:inputText value="#{user.title}" rendered="#{user.editable}" styleClass="form-control output-table-edit-field"/>
+                <h:outputLabel value="#{user.title}" styleClass="product-output-result" rendered="#{not user.editable}"/>
             </h:column>
 
-            <h:column headerClass="productOutputHeader">
+            <h:column headerClass="product-output-header">
                 <f:facet name="header" styleClass="search-output-header">
                     Publisher
                 </f:facet>
-                <h:inputText value="#{user.publisher}" rendered="#{user.editable}" styleClass="searchOutputEditField"/>
-                <h:outputLabel value="#{user.publisher}" styleClass="productOutputResult" rendered="#{not user.editable}"/>
+                <h:inputText value="#{user.publisher}" rendered="#{user.editable}" styleClass="form-control output-table-edit-field"/>
+                <h:outputLabel value="#{user.publisher}" styleClass="product-output-result" rendered="#{not user.editable}"/>
             </h:column>
 
-            <h:column headerClass="productOutputHeader">
+            <h:column headerClass="product-output-header">
                 <f:facet name="header">
                     Artist
                 </f:facet>
-                <h:inputText value="#{user.artist}" rendered="#{user.editable}" styleClass="searchOutputEditField"/>
-                <h:outputLabel value="#{user.artist}" styleClass="productOutputResult" rendered="#{not user.editable}"/>
+                <h:inputText value="#{user.artist}" rendered="#{user.editable}" styleClass="form-control output-table-edit-field"/>
+                <h:outputLabel value="#{user.artist}" styleClass="product-output-result" rendered="#{not user.editable}"/>
             </h:column>
 
-            <h:column headerClass="productOutputHeader">
+            <h:column headerClass="product-output-header">
                 <f:facet name="header">
                     Author
                 </f:facet>
-                <h:inputText value="#{user.author}" rendered="#{user.editable}" styleClass="searchOutputEditField"/>
-                <h:outputLabel value="#{user.author}" styleClass="productOutputResult" rendered="#{not user.editable}"/>
+                <h:inputText value="#{user.author}" rendered="#{user.editable}" styleClass="form-control output-table-edit-field"/>
+                <h:outputLabel value="#{user.author}" styleClass="product-output-result" rendered="#{not user.editable}"/>
             </h:column>
 
-            <h:column headerClass="productOutputHeader">
+            <h:column headerClass="product-output-header">
                 <f:facet name="header">
                     Edit
                 </f:facet>
-                <h:commandButton value="Edit" styleClass="editButton" action="#{userBean.edit(user)}" rendered="#{not user.editable}"/>
-                <h:commandButton value="Save" styleClass="editButton" action="#{userBean.save}" rendered="#{user.editable}"/>
+                <h:commandButton value="Edit" styleClass="btn btn-info edit-button" action="#{userBean.edit(user)}" rendered="#{not user.editable}"/>
+                <h:commandButton value="Save" styleClass="btn btn-info btn-sm edit-button" action="#{userBean.save}" rendered="#{user.editable}"/>
             </h:column>
 
 
-            <h:column headerClass="productOutputHeader">
+            <h:column headerClass="product-output-header">
                 <f:facet name="header">
                     Delete
                 </f:facet>
-                <h:commandButton value="Delete" styleClass="editButton"/>
+                <h:commandButton value="Delete" action="#{userBean.delete(user)}"  styleClass="btn btn-warning edit-button"/>
             </h:column>
 
         </h:dataTable>

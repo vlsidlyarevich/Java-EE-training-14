@@ -108,6 +108,9 @@ public class UserBean implements Serializable {
             user.setEditable(false);
         }
     }
+    public void delete(UserModel user){
+        this.users.remove(users.indexOf(user));
+    }
 
     public void edit(UserModel user) {
         user.setEditable(true);
